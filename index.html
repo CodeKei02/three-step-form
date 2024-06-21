@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de 3 pasos</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="index-js/script.js"></script>
+</head>
+<body>
+    <main class="form-container">
+        <div class="form-step">
+            <div class="title">Register</div>
+            <form class="form">
+                <span class="message-error"></span>
+                <label for="name" class="form-label">Name</label>
+                <input type="text" name="name" class="form-input" id="form-name" placeholder="enter your name">
+
+                <span class="message-error"></span>
+                <label for="email" class="form-label">Email</label>
+                <input type="email" name="email" class="form-input" id="form-email" placeholder="example@gmail.com" required>
+                
+                <input type="submit" value="Continue" class="button-continue">
+            </form>
+        </div>
+
+        <div class="form-step disabled">
+            <div class="title">Which topics you are interested in?</div>
+            <div class="topics-options">
+                <button class="topic-option">Software Development</button>
+                <button class="topic-option">User Experience</button>
+                <button class="topic-option">Graphic Design</button>
+            </div>
+            
+
+            <button type="submit" class="button-continue" id="button-continue">Continue</button>
+        </div>
+
+        <div class="form-step disabled">
+            <div class="form-data">
+                <div class="title">Summary</div>
+                <div class="data-user">
+                    <div class="data-text">
+                        Name:
+                        <div class="user user-name"></div>
+                    </div>
+
+                    <div class="data-text">
+                        Email:
+                        <div class="user user-email"></div>
+                    </div>
+                    
+                </div>
+
+                <div class="data-topics">
+                    Topics:
+                    <ul class="item-list">
+
+                    </ul>
+                </div>
+            </div>
+            <div class="confirm">
+                <button type="submit" class="button-continue" id="button-confirm">Confirm</button>
+            </div>
+        </div>
+
+        <div class="step-footer">
+            <div class="step">Step <span class="step-number">1</span> of 3</div>
+            <div class="step-circle step-circle-shadow"></div>
+            <div class="step-circle"></div>
+            <div class="step-circle"></div>
+        </div>
+    </main>
+</body>
+</html>
