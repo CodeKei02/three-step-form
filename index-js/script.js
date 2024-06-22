@@ -117,12 +117,16 @@ function messageSuccess() {
 };
 function updateList() {
     let ul = document.querySelector('.item-list');
+    const topicFragment = document.createDocumentFragment();
     ul.innerHTML = "";
+
     topicSelected.forEach((topic) => {
         const li = document.createElement('li');
         li.textContent = topic;
-        ul.appendChild(li);
+        topicFragment.appendChild(li);
     });
+
+    ul.appendChild(topicFragment);
 };
 
 topicsItemList();
